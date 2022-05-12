@@ -62,8 +62,18 @@
 </section>
   
   <section
-   <div><script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script><br><iframe id="fitPrintIframe" frameborder="0" scrolling="no" src="https://fitprint.io/store?shop_id=1651766089814x684824566243113200&floating_checkout=hidden&redirect_uri=ShubeloVibez" width="100%" onload="iFrameResize({ log: true, checkOrigin: false, heightCalculationMethod: 'grow', autoResize: false}, '#fitPrintIframe')"></iframe>
-<style>iframe { width: 1px; min-width: 100%; } </style></div>        
+   <div style="max-width: 1040px; margin: 0 auto;">
+      <div><script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js">
+      </script><br>
+      <iframe id="fitPrintIframe" frameborder="0" scrolling="no"
+      src="https://shop.fitprint.io?shop=19887373-e484-44f7-9daa-ddcb9f7b8cb1"
+      width="100%" onload="iFrameResize({ log: false, checkOrigin: false,
+        heightCalculationMethod: 'grow', autoResize: false, onInit:
+        function(iframe) { $(window).on('scroll', () =>
+        { const scrollFromTop = $(document).scrollTop();
+          iframe.iFrameResizer.sendMessage(scrollFromTop);}); }},
+          '#fitPrintIframe')"></iframe> <style> iframe
+          { width: 1px; min-width: 100%; } </style></iframe></div></div>       
            
    </section            
 
